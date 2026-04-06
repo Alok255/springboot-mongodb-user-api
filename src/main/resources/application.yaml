@@ -1,17 +1,26 @@
 spring:
-  application:
-    name: Test
-
-server.port: 8084
+  data:
+    mongodb:
+      uri: mongodb+srv://<userName>:<password>@testdb.6mcglck.mongodb.net/testingDB
+#testdb.6mcglck.mongodb.net
+#
+#
+#testingDB
+#
+#userDetails
 #  h2:
 #    console:
 #      enable: true
+#      settings:
+#        web-allow-others: true
 #    path: /h2-console
 #  datasource:
-#    url: jdbc:h2:mem:testdb
+#    url: "jdbc:h2:file:~/testdb;AUTO_SERVER=true"
 #    driver-class-name: org.h2.Driver
 #    username: test
 #    password: test
 #  jpa:
 #    database-platform: org.hibernate.dialect.H2Dialect
+
+server.port: 8084
 

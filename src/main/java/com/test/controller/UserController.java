@@ -1,11 +1,18 @@
 package com.test.controller;
 
+import com.test.dto.UserDTO;
+import com.test.entity.UserEntity;
+import com.test.service.UserService;
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/users")
+@AllArgsConstructor
 public class UserController {
+
+    private final UserService userService;
 
     @GetMapping
     public String getUsers(){
@@ -22,8 +29,14 @@ public class UserController {
     }
 
     @PostMapping("/createUser")
-    public ResponseEntity<?> createUser(@RequestParam String name, @RequestParam Integer age){
-        return ResponseEntity.ok("UserName: " + name + " Age: " + age + " created");
+    public ResponseEntity<?> createUser(@RequestBody UserDTO userDTO) {
+         UserEntity createUser = userService.createUser(userDTO);
+         return ResponseEntity.ok("User created: " + createUser);
     }
+
+   /* @GetMapping("/getAllUsers")
+    public ResponseEntity<?> getAllUsers(){
+        return ResponseEntity.ok(userService.getAllUser());
+    }*/
 
 }
