@@ -15,8 +15,8 @@ public class EmployeeDTO {
     private int id;
     @JsonProperty(value = "employee_name")
     private String employeeName;
-    @JsonProperty(value="employee_age")
+    @JsonProperty(value = "employee_age")
     private String employeeAge;
-    @JsonProperty(value="employee_salary")
+    @JsonProperty(value = "employee_salary")
     private String employeeSalary;
 }

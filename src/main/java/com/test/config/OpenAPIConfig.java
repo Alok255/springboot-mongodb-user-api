@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class OpenAPIConfig {
     @Bean
-    public OpenAPI customAPI(){
+    public OpenAPI customAPI() {
         return new OpenAPI().info(new Info()
                 .version("v1.0.0")
                 .title("UserManagement API")

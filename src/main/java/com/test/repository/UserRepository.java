@@ -7,5 +7,6 @@ import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<UserEntity, String> {
     Optional<UserEntity> findByUserName(String userName);
+
     String deleteByUserName(String userName);
 }

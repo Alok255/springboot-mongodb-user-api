@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name ="RestApiClient", url="https://dummy.restapiexample.com/api/v1")
+@FeignClient(name = "RestApiClient", url = "https://dummy.restapiexample.com/api/v1")
 public interface RestApiCall {
     @GetMapping("/employees")
     APIResponseDTO<List<EmployeeDTO>> getAllEmployees();

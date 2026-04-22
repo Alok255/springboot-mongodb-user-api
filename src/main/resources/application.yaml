@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: mongodb+srv://username:password@testdb.6mcglck.mongodb.net/testingDB
+      uri: mongodb+srv://alokrajsingh255_db_user:aloktestdb@testdb.6mcglck.mongodb.net/testingDB
 #testdb.6mcglck.mongodb.net
 #
 #
